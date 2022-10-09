@@ -37,3 +37,25 @@ var header           = document.getElementById('header');
         }
     });
     
+
+/*SCRIP PARA FILTAR OS PROJETOS NA BARRA DE PESQUISA */
+
+let seachBox = document.querySelector('#seach-box');
+let imagem = document.querySelectorAll('.container .container-imagem .imagem')
+
+seachBox.oninput = () =>{
+    imagem.forEach(hide => hide.style.display = 'none');
+    let value = seachBox.value;
+
+    imagens.forEach(filter =>{
+        let title = filter.getAttribute('data-title');
+
+        if(value == title){
+            filter.style.display = "block";
+
+        }
+        if(seachBox.value == ''){
+            filter.style.display = "block";
+        }
+    })
+}

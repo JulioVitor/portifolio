@@ -32,48 +32,34 @@
     <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
         <h1>Projetos</h1>
         
+        <div class="container">
+            <h2 class="heading">Pesquisar Projetos</h2>
+            <input type="text" placeholder="escreva....." id="seach-box">       
+            
+            <div class="container-imagem">
+                <div class="imagem" data-title="Clone Netflix">
+                    <a href="https://github.com/JulioVitor/cloneNetflix" target="_blank">
+                    <img src="../img/logonetflix.png" alt="logonetflix"></a>
+                    <h3>Clone Netflix</h3>
+                </div>
+
+                <div class="imagem" data-title="App conversor dolar real">
+                    <a href="https://github.com/JulioVitor/AppDlarReal" target="_blank">
+                    <img src="../img/logodolar.png" alt="logodolar"></a>
+                    <h3>App Dolar Real</h3>
+                </div>
+
+                <div class="imagem" data-title="Grud Simples em andamento..">
+                    <a href="https://github.com/JulioVitor/projetoCRUD" target="_blank">
+                    <img src="../img/logoestoque.jpg" alt="logoestoque"></a>
+                    <h3>Sistema estoque de lojas "Em andamento"</h3>
+                </div>
+            </div>
+        </div>
     </div>
+   
 </body>
 
-<script>
-    var header           = document.getElementById('header');
-    var navigationHeader = document.getElementById('navigation_header');
-    var content          = document.getElementById('content');
-    var showSidebar      = false;
+<script type="text/javascript" src="./js/script.js"></script>
 
-    function toggleSidebar()
-    {
-        showSidebar = !showSidebar;
-        if(showSidebar)
-        {
-            navigationHeader.style.marginLeft = '-10vw';
-            navigationHeader.style.animationName = 'showSidebar';
-            content.style.filter = 'blur(2px)';
-        }
-        else
-        {
-            navigationHeader.style.marginLeft = '-100vw';
-            navigationHeader.style.animationName = '';
-            content.style.filter = '';
-        }
-    }
-
-    function closeSidebar()
-    {
-        if(showSidebar)
-        {
-            showSidebar = true;
-            toggleSidebar();
-        }
-    }
-
-    window.addEventListener('resize', function(event) {
-        if(window.innerWidth > 768 && showSidebar) 
-        {  
-            showSidebar = true;
-            toggleSidebar();
-        }
-    });
-
-</script> 
 </html>
